@@ -1,11 +1,9 @@
 ## Dataset download
-Kaggle playground Mnist
+Kaggle playground cat_or_dog
 
 ## 运行步骤
 TF1.14
-* python main.py 0 运行train.py 在pb_models目录下生成参数训练好的原始的model.pb文件
-* python main.py 1 运行test.py 生成sample_submission.xls,提交kaggle，测试模型的正确率
-* 运行change_mode.py 裁剪原始模型的最后几层，添加新的层，重新训练新的模型可以参考inference的代码，只要找到对应的op(adam) 然后session.run就可以了，保存新的模型成pb
+* 运行change_mode.py 裁剪原始resnet50模型的最后1层，添加新的层，重新训练新的模型可以参考inference的代码，只要找到对应的op(adam) 然后session.run就可以了，保存新的模型成pb
 
 ## 修改模型基本思路change_mode.py
 修改pb模型，可以参考INT8化时对模型修改的方法
