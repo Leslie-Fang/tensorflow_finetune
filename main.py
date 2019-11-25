@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from test import test
+from test import test_fp32
 import argparse
 
 if __name__ == "__main__":
@@ -8,8 +8,6 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 	if args.mode is 1:
 		#FP32
-		test(0)
-	elif args.mode is 2:
-		#FP32 new model after fine tune
-		test(1)
+		test_fp32()
+
 
