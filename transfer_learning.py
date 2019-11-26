@@ -45,7 +45,7 @@ def train():
     model.add(keras.applications.ResNet50(include_top=False, pooling='max', weights="imagenet"))
     model.add(Dense(NUM_CLASSES, activation='softmax'))
     # ResNet-50 model is already trained, should not be trained
-    model.layers[0].trainable = True
+    model.layers[0].trainable = True #False 不会去训练预训练好的网络，True的话会再去训练的
     model.summary()
     model.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
     X_train, y_train = read_train()
