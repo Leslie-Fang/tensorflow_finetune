@@ -2,7 +2,7 @@
 Kaggle playground Mnist
 
 ## 有两种方法
-* 第一种是基于keras来做迁移学习，参考《Tensorflow2深度学习》 8.5小节，这种方法简单，但是需要用keras模型库里面自带的模型
+* 第一种是基于keras来做迁移学习，参考《Tensorflow2深度学习》 8.5小节，这种方法简单，但是需要用keras模型库里面自带的模型, 也可以参考本repo的transfer_learning的分支
 * 第二种就是当前repo里面的方法，加载pb文件，裁剪最后几层，然后添加新的层
 
 ## 运行步骤
